@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main()
+{ 
+	int  jugmentday(int a,int b,int c);
+	int year,month,day,data;
+	printf("请输入x年x月x日\n");
+	scanf("%d %d %d",&year,&month,&day);
+	data=jugmentday(year,month,day);
+	printf("今天是今年的第%d天\n",data);
+	return 0;
+}
+int  jugmentday(int year,int month,int day)
+{
+	int time;
+if(year%4==0&&year%100!=0)
+	{
+		switch(month)
+		{
+		case 1:time=day;      break;
+		case 2:time=day+31;   break;
+		case 3:time=day+60;   break;
+		case 4:time=day+91;   break;
+		case 5:time=day+121;  break;
+		case 6:time=day+152;  break;
+		case 7:time=day+182;  break;
+		case 8:time=day+213;  break;
+		case 9:time=day+244;  break;
+		case 10:time=day+274; break;
+		case 11:time=day+305; break;
+		case 12:time=day+335; break;
+		}
+	}
+		else
+		{
+			switch(month)
+			{
+        case 1:time=day;      break;
+		case 2:time=day+31;   break;
+		case 3:time=day+59;   break;
+		case 4:time=day+90;   break;
+		case 5:time=day+120;  break;
+		case 6:time=day+151;  break;
+		case 7:time=day+181;  break;
+		case 8:time=day+212;  break;
+		case 9:time=day+243;  break;
+		case 10:time=day+273; break;
+		case 11:time=day+304; break;
+		case 12:time=day+334; break;
+			}
+		}
+	return time;
+}

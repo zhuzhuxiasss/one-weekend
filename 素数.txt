@@ -1,0 +1,63 @@
+#include<stdio.h>
+int main()
+{
+	int exchange(int *a,int *b);
+	int seachsushu(int num1,int num2);
+int num1,num2,*p1,*p2,times;
+printf("please input two number:\n");
+scanf("%d %d",&num1,&num2);
+p1=&num1;
+p2=&num2;
+exchange(p1,p2);
+times=seachsushu(num1,num2);
+printf("\n");
+printf("%d和%d之间的素数有%d个\n",num1,num2,times);
+return 0;
+}
+int exchange(int *a,int *b)
+{
+	int t;
+	if(*a>*b)
+	{
+	  t=*a;
+	  *a=*b;
+	  *b=t;
+	  return 0;
+	}
+}
+int seachsushu(int num1,int num2)
+{
+	int i,j,time=0,y=0;
+for(i=num1;i<num2;i++)
+{  
+	if(i>1)
+	{
+		for(j=2;j<i;j++)
+		{
+			if(i==2)
+			{
+				y=0;
+				break;
+			}
+			else if(i%j==0)
+			{
+				y=1;
+				break;
+			}
+			 
+			else
+			{
+				y=0;	
+			}
+			
+		}
+		        if(y==0)
+				{
+				printf("%4d",i);
+				time++;
+				if(time%5==0)printf("\n");
+				}
+}
+}
+	return time;
+}

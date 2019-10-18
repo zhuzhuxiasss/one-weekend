@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	void comparision(int *q1,int *q2,int *q3);
+	int num1,num2,num3,*p1,*p2,*p3;
+	printf("请任意输入三个数:\n");
+	scanf("%d %d %d",&num1,&num2,&num3);
+    p1=&num1;
+    p2=&num2;
+	p3=&num3;
+	comparision(p1,p2,p3);
+	printf("%d %d %d\n",*p1,*p2,*p3);
+	return 0;
+}
+void comparision(int *q1,int *q2,int *q3)
+{
+	    void swap(int *a1,int*a2);
+		if(*q1>*q2)swap(q1,q2);
+		if(*q1>*q3)swap(q1,q3);
+		if(*q2>*q3)swap(q2,q3);
+}
+void swap(int *a1,int*a2)
+{
+	int ship;
+	ship=*a1;
+	*a1=*a2;
+	*a2=ship;
+}

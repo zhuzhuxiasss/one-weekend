@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int  num1,num2,num3,ship;
+	printf("请任意输入三个数\n");
+	scanf("%d %d %d",&num1,&num2,&num3);
+	if(num1>num2)
+	{
+		ship=num1;
+	    num1=num2;
+	    num2=ship;
+	}
+	if(num1>num3)
+	{	ship=num1;
+	    num1=num3;
+		num3=ship;
+	}
+	if(num2>num3)
+	{
+		ship=num2;
+	    num2=num3;
+		num3=ship;
+	}
+	printf("%d %d %d\n",num1,num2,num3);
+	return 0;
+}
